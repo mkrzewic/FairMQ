@@ -42,8 +42,8 @@ class FairMQTransportFactory
     auto GetId() const -> const std::string { return fkId; };
 
     /// Get a pointer to the associated polymorphic memory resource
-    fair::mq::ChannelResource* GetMemoryResource() { return &fMemoryResource; }
-    operator fair::mq::ChannelResource*() { return &fMemoryResource; }
+    fair::mq::FairMQMemoryResource* GetMemoryResource() { return &fMemoryResource; }
+    operator fair::mq::FairMQMemoryResource*() { return &fMemoryResource; }
 
     /// @brief Create empty FairMQMessage
     /// @return pointer to FairMQMessage
